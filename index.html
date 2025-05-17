@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Traffic Exchange Viewer</title>
-    <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TrafficOp Exchange</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Traffic Exchange Viewer</h1>
-        <div id="timer">Time Left: <span id="time">20</span>s</div>
-        <div class="progress-bar">
-            <div id="progress"></div>
-        </div>
-        <iframe id="siteFrame" src="" frameborder="0"></iframe>
+
+<div class="container">
+
+  <h1>TrafficOp Exchange</h1>
+
+  <div id="user-section">
+    <div id="login-form">
+      <h2>Login / Register</h2>
+      <input type="text" id="username" placeholder="Enter username" />
+      <button id="loginBtn">Login</button>
+      <div id="login-error" class="error"></div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="user-info" class="hidden">
+      <p>Welcome, <span id="display-username"></span>!</p>
+      <p>Your Credits: <span id="credits">0</span></p>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div id="viewer-section" class="hidden">
+    <div id="timer">Time Left: <span id="time">20</span>s</div>
+    <div class="progress-bar"><div id="progress"></div></div>
+
+    <iframe id="siteFrame" src="" frameborder="0"></iframe>
+
+    <div class="controls">
+      <button id="skipBtn" disabled>Skip (Spend 1 Credit)</button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div id="ad-section">
+    <!-- Placeholder for ads -->
+    <p>Ad Spot - Put your Ad code here</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
